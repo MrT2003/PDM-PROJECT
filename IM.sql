@@ -258,7 +258,34 @@ VALUES ('PRD003', 2);
 INSERT INTO Product_Category (PID, TID)
 VALUES ('PRD004', 3);
 
+-- INSERT TO EXPORT TABLE 
+INSERT INTO Export (EID, WID, PID, ExportQuantity, ExportDate)
+VALUES ('EXP001', 1, 'PRD001', 20, current_date);
 
+-- Insert data for another export of 5 Laptops (PRD003) from Warehouse 2 (WID 2) with a different EID and date
+INSERT INTO Export (EID, WID, PID, ExportQuantity, ExportDate)
+VALUES ('EXP002', 2, 'PRD003', 5, '2024-04-02');
+
+INSERT INTO Export (EID, WID, PID, ExportQuantity, ExportDate)
+VALUES ('EXP003', 2, 'PRD003', 12, '2024-05-02');
+
+INSERT INTO Export (EID, WID, PID, ExportQuantity, ExportDate)
+VALUES ('EXP004', 2, 'PRD001', 10, '2024-05-10');
+
+INSERT INTO Export (EID, WID, PID, ExportQuantity, ExportDate)
+VALUES ('EXP005', 1, 'PRD002', 5, '2024-05-09');
+
+INSERT INTO Export (EID, WID, PID, ExportQuantity, ExportDate)
+VALUES ('EXP006', 1, 'PRD003', 5, '2024-04-02');
+
+INSERT INTO Export (EID, WID, PID, ExportQuantity, ExportDate)
+VALUES ('EXP007', 1, 'PRD004', 5, '2024-04-09');
+
+
+
+
+
+----------------------------------------------------------------
 
 -- ... and so on, linking products to their corresponding categories
 -- count all of type
