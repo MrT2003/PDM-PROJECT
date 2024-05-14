@@ -115,7 +115,7 @@ public class newframe2 extends JFrame {
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(newframe2.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=HospitalManage;encrypt=false;user=sa;password=Nghia2910";
+                String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=nghia;encrypt=false;user=sa;password=Quenroi6212@";
                 try(Connection con = DriverManager.getConnection(connectionUrl) ; Statement stmt = con.createStatement()) {
                     String SQL = jTextField2.getText();
                     ResultSet rs = stmt.executeQuery(SQL);
@@ -171,8 +171,8 @@ public class newframe2 extends JFrame {
                     } catch (ClassNotFoundException ex) {
                         Logger.getLogger(newframe2.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=HospitalManage;encrypt=false;user=sa;password=Nghia2910";
-                    try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement()) {
+                    String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=nghia;encrypt=false;user=sa;password=Quenroi6212@";
+                    try (Connection con = DriverManager.getConnection(connectionUrl); Statement sstmt = con.createStatement()) {
                         String Command = null;
                         if (isAdmin == true){
                             Command ="SELECT\n" +
@@ -194,7 +194,7 @@ public class newframe2 extends JFrame {
                                     "INNER JOIN Faculty f ON d.Fal_ID = f.Fal_ID\n" +
                                     "INNER JOIN Employee e ON d.ID = e.ID";
                         }
-                        ResultSet rs = stmt.executeQuery(Command);
+                        ResultSet rs = sstmt.executeQuery(Command);
                         ResultSetMetaData rsmd = rs.getMetaData();
                         jTable1.setModel(DbUtils.resultSetToTableModel(rs));
                         int cols = rsmd.getColumnCount();
@@ -237,7 +237,7 @@ public class newframe2 extends JFrame {
                     } catch (ClassNotFoundException ex) {
                         Logger.getLogger(newframe2.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=HospitalManage;encrypt=false;user=sa;password=Nghia2910";
+                    String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=nghia;encrypt=false;user=sa;password=Quenroi6212@";
                     try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement()) {
                         String Command = null;
                         if (isAdmin == true){
@@ -308,7 +308,7 @@ public class newframe2 extends JFrame {
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(newframe2.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=HospitalManage;encrypt=false;user=sa;password=Nghia2910";
+                String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=nghia;encrypt=false;user=sa;password=Quenroi6212@";
                 try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement()) {
                     String Command = null;
                     if (isAdmin == true){
@@ -378,7 +378,7 @@ public class newframe2 extends JFrame {
                 } catch (ClassNotFoundException ex) {
                     Logger.getLogger(newframe2.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=HospitalManage;encrypt=false;user=sa;password=Nghia2910";
+                String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=nghia;encrypt=false;user=sa;password=Quenroi6212@";
                 try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement()) {
                     String Command = null;
                     if (isAdmin == true){
@@ -530,7 +530,7 @@ public class newframe2 extends JFrame {
                             } catch (ClassNotFoundException ex) {
                                 Logger.getLogger(newframe2.class.getName()).log(Level.SEVERE, null, ex);
                             }
-                            String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=HospitalManage;encrypt=false;user=sa;password = Nghia2910";
+                            String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=nghia;encrypt=false;user=sa;password = Quenroi6212@";
                             try (Connection con = DriverManager.getConnection(connectionUrl) ; PreparedStatement pstmt = con.prepareStatement("SELECT Pname FROM Patient WHERE Pname = ?")) {
                                 pstmt.setString(1, name); // Bind user input to parameter 1
                                 ResultSet rs = pstmt.executeQuery();
