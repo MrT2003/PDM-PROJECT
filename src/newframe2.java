@@ -106,6 +106,7 @@ public class newframe2 extends JFrame {
         button1.setBackground(Color.BLACK);
         button1.setForeground(Color.white);
         button1.setFocusable(false);
+        //button Run
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 button1ActionPerformed(evt);
